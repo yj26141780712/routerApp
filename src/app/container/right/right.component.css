@@ -1,5 +1,7 @@
 .home-right{
   height: 8rem;
   margin-left: 15rem;
+  padding: 1rem 1rem;
   border-radius: .25rem;
+  position: relative;
 }

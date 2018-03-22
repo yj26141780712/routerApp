@@ -2,3 +2,12 @@
 .errorColor {
     color: red;
 }
+
+.home-right div{
+    margin-bottom: 1rem;
+ }
+
+ .btn-container {
+     margin-left: 1rem;
+     width: 5rem;
+ }

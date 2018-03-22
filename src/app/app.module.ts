@@ -14,10 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { LoginComponent } from './login/login.component';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import { CookieModule  } from 'ngx-cookie';
 
 @NgModule({
   declarations: [
@@ -30,6 +28,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    CookieModule.forRoot(),
     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: true } ),
   ],
   providers:[],

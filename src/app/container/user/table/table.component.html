@@ -1,3 +1,20 @@
-<p>
-  table works!
-</p>
+<div class="containet-table">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>姓名</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let  of userinfos">
+        <td>{{ u.id }}</td>
+        <td>{{ u.username}}</td>
+        <td>{{ u.password}}</td>
+        <td>{{ u.name}}</td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
