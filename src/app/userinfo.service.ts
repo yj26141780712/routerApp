@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { of } from 'rxjs/observable/of';
 import { Userinfos } from './mock-userinfo';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Injectable()
 export class UserinfoService {
@@ -20,7 +21,11 @@ export class UserinfoService {
 
   serch(params: string): Observable<Userinfo[]> {
     console.log("查询有效！");
-    Userinfos
-    return of(Userinfos)
+    let arrs:[Userinfo];
+    Userinfos.forEach((obj,i)=>{
+        console.log(obj);
+        console.log(i);
+    })
+    return of(arrs)
   }
 }
