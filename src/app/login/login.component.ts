@@ -21,9 +21,11 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, fb: FormBuilder,private _cookieService:CookieService) {
     let _cookie:any = this._cookieService.getObject("routerApp");
     console.log(_cookie);
+    let username = _cookie&&_cookie.username||"";
+    let password = _cookie&&_cookie.password||"";
     this.myForm = fb.group({
-      'username': [_cookie.username],
-      'password': [_cookie.password]
+      'username': [username],
+      'password': [password]
     })
   }
 

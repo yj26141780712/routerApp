@@ -1,3 +1,4 @@
+import { UserinfoService } from './../../../userinfo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userinfoService:UserinfoService) { }
 
+  onclick(){
+    this.userinfoService.subject.next("");
+  }
   ngOnInit() {
   }
 
