@@ -1,0 +1,20 @@
+
+<form class="form-signin text-center" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" > 
+  <img class="mb-4" ngsrc="/src/img/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h3 class="h3 mb-3 font-weight-normal errorColor">{{ errorMessage }}</h3>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="username" id="inputEmail" class="form-control" placeholder="用户名"
+    [formControl]="myForm.controls['username']"
+  >
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="密码"
+  [formControl]="myForm.controls['password']"
+  >
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> 记住我
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block">登陆</button>
+  <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+</form>

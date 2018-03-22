@@ -1,0 +1,14 @@
+<div class="home-left">
+  <ul class="list-group">
+   <!-- <li class="list-group-item" routerLink="/button"  routerLinkActive="active">button</li>
+    <li class="list-group-item" routerLink="/navigation" routerLinkActive="active">navigation</li> 
+    <li class="list-group-item">Morbi leo risus</li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li> -->
+    <li class="list-group-item"  *ngFor="let link of links" 
+    routerLink="{{link.path }}" >{{ link.name }}${{link.path }}</li>
+
+  </ul>
+</div>
+
+
