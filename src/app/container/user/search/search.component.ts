@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
 }
 
   onclick(){
-    this.userinfoService.subject.next("");
+    this.userinfoService.subject.next(this.keyword);
   }
   ngOnInit() {
   }

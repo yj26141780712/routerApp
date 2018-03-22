@@ -12,6 +12,8 @@ import {Observable} from "rxjs/Observable";
 export class TableComponent implements OnInit {
 
   userinfos:Userinfo[];
+
+  selectUserinfo:Userinfo;
   constructor(private userinfoService:UserinfoService) { }
 
   ngOnInit() {
@@ -24,6 +26,22 @@ export class TableComponent implements OnInit {
     }).subscribe(
       userinfos => this.userinfos = userinfos
     );
-  }
 
+    this.userinfoService.delsubject.asObservable().subscribe(
+      () => {
+        this.userinfos = this.userinfos.filter(h => h !== this.selectUserinfo);
+      }
+    );
+
+    this.userinfoService.addsubject.asObservable().subscribe(
+      userinfo => {
+        this.userinfos.push(userinfo);
+      }
+    );
+  }
+  
+  click(u:Userinfo):void{
+    this.selectUserinfo = u;
+    console.log(u);
+  }
 }

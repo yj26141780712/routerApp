@@ -12,6 +12,10 @@ export class UserinfoService {
   //public subject : Subject<string>; 
   public subject= new Subject<string>();
 
+  public delsubject = new Subject();
+
+  public addsubject = new Subject<Userinfo>();
+
   constructor() { }
 
   getUserinfos():Observable<Userinfo[]>{
@@ -20,14 +24,19 @@ export class UserinfoService {
   }
 
   serch(params: string): Observable<Userinfo[]> {
-    console.log("查询有效！");
-    let arrs:[Userinfo];
+    params =params||"";
+    let arrs:Userinfo[]=[];
     Userinfos.forEach((obj,i)=>{
-      if(obj.username.indexOf(params)>-1||obj.name.indexOf(params) || params.trim().length==0){
-         console.log(obj);
-         console.log(i);
+      if(obj.username.indexOf(params)>-1||obj.name.indexOf(params)>-1 || params.trim().length==0){
+         //console.log(obj.username.indexOf(params));
+         arrs.push(obj);
       }       
     })
+    console.log(arrs);
     return of(arrs)
+  }
+
+  delete(){
+    //return  
   }
 }

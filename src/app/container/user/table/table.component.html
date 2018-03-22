@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let u of userinfos">
+      <tr *ngFor="let u of userinfos" (click)="click(u)" [class.selected]="u==selectUserinfo" >
         <td>{{ u.id }}</td>
         <td>{{ u.username}}</td>
         <td>{{ u.password}}</td>
