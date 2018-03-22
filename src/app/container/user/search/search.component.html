@@ -1,7 +1,7 @@
 <div class="container-top">
   <div class="col-lg-4">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
+      <input type="text" class="form-control" placeholder="Search for..." [formControl]="keywordFilter" >
       <span class="input-group-btn">
         <button class="btn btn-secondary btn-container" type="button" (click)="onclick()" >查询</button>
       </span>

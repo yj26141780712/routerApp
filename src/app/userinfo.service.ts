@@ -23,8 +23,10 @@ export class UserinfoService {
     console.log("查询有效！");
     let arrs:[Userinfo];
     Userinfos.forEach((obj,i)=>{
-        console.log(obj);
-        console.log(i);
+      if(obj.username.indexOf(params)>-1||obj.name.indexOf(params) || params.trim().length==0){
+         console.log(obj);
+         console.log(i);
+      }       
     })
     return of(arrs)
   }

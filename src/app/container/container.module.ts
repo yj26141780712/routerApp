@@ -12,6 +12,7 @@ import { TableComponent } from './user/table/table.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { UserComponent } from './user/user.component';
 import { UserinfoService } from '../userinfo.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +21,8 @@ import { UserinfoService } from '../userinfo.service';
   imports: [
     CommonModule,
     ContainerRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   declarations: [ButtonComponent,NavigationComponent, SearchComponent
     , ToolsComponent, TableComponent, TabsComponent,
