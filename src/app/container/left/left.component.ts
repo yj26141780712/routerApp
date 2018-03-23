@@ -11,6 +11,7 @@ export class LeftComponent implements OnInit {
 
   links:Link[];
 
+  selectedLink:Link;
   constructor(private linkService:LinkService) { }
 
   getLinks():void{
@@ -26,8 +27,8 @@ export class LeftComponent implements OnInit {
      //console.log(this.links);
   }
 
-  click():void{
-    
+  click(link:Link):void{
+    this.selectedLink =link;
   }
 
 }

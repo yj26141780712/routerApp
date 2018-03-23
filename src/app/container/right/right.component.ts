@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-right',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right.component.css']
 })
 export class RightComponent implements OnInit {
+
+  @Input() path :string; 
 
   constructor() { }
 

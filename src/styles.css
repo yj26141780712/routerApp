@@ -1,17 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
-.errorColor {
-    color: red;
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;    
 }
 
-.home-right div{
+.home-header {
+    height: 3.5rem;
+    position: relative;    
+}
+
+.home-container {
+    background: #ffffff;
+    width: 100%;
+    position: absolute;
+    top: 3.5rem;
+    bottom: 0rem;
+}
+.home-left {
+    width: 15rem;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+}
+
+.home-right {
+    position: absolute;
+    top: 0rem;
+    left: 15rem;
+    right: 0rem;
+    bottom: 0rem;
+}
+
+.home-right-ns {
+   height: 2.5rem;
+   background:#f3f3f3;
+}
+
+.home-right-tl {
+   height: 2.5rem;
+   width: 100%;
+   position: absolute;
+   top: 2.5rem;
+}
+
+.home-right-ct{
+    padding: 1rem 1rem;
+    border-radius: .25rem;
+    background:#f3f3f3;
+    position: absolute;
+    width: 100%;
+    top: 5rem;
+    bottom: 0rem;
+}
+  
+.home-right-ct div{
     margin-bottom: 1rem;
- }
+}
 
  .btn-container {
      margin-left: 1rem;
      width: 5rem;
  }
 
- a {
+.btn-container-right {
+    margin-left: 1rem;
+    width: 5rem;
+    float: right;
+}
+
+.bg-home-header {
+    background: #2dc3e8;
+}
+
+.bg-left-link {
+    background: #f5f5f5;
+}
+
+.text-white {
+    color:#fff; 
+}
+
+
+.errorColor {
+    color: red;
+}
+a {
     cursor:pointer
- }
+}

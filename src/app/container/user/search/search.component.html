@@ -1,10 +1,10 @@
-<div class="container-top">
-  <div class="col-lg-4">
+<div class="col-lg-4">
+  <form action="" (ngSubmit)="onSubmit()" >
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for..." [formControl]="keywordFilter" >
+      <input type="text" class="form-control" placeholder="Search for..." [formControl]="keywordFilter">
       <span class="input-group-btn">
-        <button class="btn btn-secondary btn-container" type="button" (click)="onclick()" >查询</button>
+        <button class="btn btn-secondary btn-container" type="submit">查询</button>
       </span>
     </div>
-  </div>
+  </form>
 </div>

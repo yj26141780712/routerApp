@@ -13,6 +13,9 @@ import { TabsComponent } from './tabs/tabs.component';
 import { UserComponent } from './user/user.component';
 import { UserinfoService } from '../userinfo.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderNavigationComponent } from './user/header-navigation/header-navigation.component';
+import { AlertModule, PaginationModule } from 'ngx-bootstrap';
+
 
 
 
@@ -23,10 +26,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContainerRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    //ModalModule.forRoot(),
+    AlertModule.forRoot(),
+    PaginationModule.forRoot()
   ],
   declarations: [ButtonComponent,NavigationComponent, SearchComponent
     , ToolsComponent, TableComponent, TabsComponent,
-  ContainerComponent,LeftComponent,RightComponent,UserComponent],
+  ContainerComponent,LeftComponent,RightComponent,UserComponent, HeaderNavigationComponent],
   providers:[UserinfoService]
 })
 export class ContainerModule { }

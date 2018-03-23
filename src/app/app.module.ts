@@ -16,6 +16,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieModule  } from 'ngx-cookie';
+import { ModalModule,AlertModule,PaginationModule} from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,9 @@ import { CookieModule  } from 'ngx-cookie';
     AppRoutingModule,
     HttpClientModule,
     CookieModule.forRoot(),
+    ModalModule.forRoot(),
+    AlertModule.forRoot(),
+    //PaginationModule.forRoot(),
     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: true } ),
   ],
   providers:[],

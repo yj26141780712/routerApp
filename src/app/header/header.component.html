@@ -1,24 +1,24 @@
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" nghref="#">Navbar</a>
+<div id="home-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-home-header">
+    <a class="navbar-brand text-white" nghref="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >
-          <a class="nav-link"  >Container <span class="sr-only">(current)</span></a>
+          <a class="nav-link text-white"  >Container <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item" routerLink="./about" routerLinkActive="active">
-          <a class="nav-link" >about</a>
+          <a class="nav-link text-white" >about</a>
         </li>
         <li class="nav-item" routerLink="./contact" routerLinkActive="active">
-          <a class="nav-link" >contact</a>
+          <a class="nav-link text-white" >contact</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <h4 class="">您好<span *ngIf="name">,</span> {{ name }}</h4>
-        <button class="btn btn-outline-success my-2 my-sm-0" (click)="LoginOut()" >登出</button>
+        <a class="nav-link text-white" >您好{{name?","+name:""}}</a>
+        <button class="btn btn-outline-success" (click)="LoginOut()" >登出</button>
       </form>
     </div>
   </nav>

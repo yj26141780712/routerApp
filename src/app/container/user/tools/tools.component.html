@@ -1,5 +1,39 @@
-<div class="container-tools">
-  <button type="button" class="btn btn-primary btn-container " (click)="add()" >新增</button>
-  <button type="button" class="btn btn-info btn-container ">修改</button>
+
+  <button type="button" class="btn btn-primary btn-container" (click)="add(template)">新增</button>
+  <button type="button" class="btn btn-info btn-container" (click)="edit(template)" >修改</button>
   <button type="button" class="btn btn-danger btn-container" (click)="del()">删除</button>
-</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h3>新用户添加</h3>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+      <div class="form-group">
+        <label for="name">用户名</label>
+        <input type="text" class="form-control" formControlName="username" >
+        <span class="text-danger" [hidden]="!myForm.hasError('minlength', 'username')">
+            用户名长度必须大于6
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">密码</label>
+        <input type="password" class="form-control" formControlName="password" >
+        <span class="text-danger" [hidden]="!myForm.hasError('required', 'password')">
+            密码不正确
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">姓名</label>
+        <input type="text" class="form-control" formControlName="name" >
+        <span class="text-danger" [hidden]="!myForm.hasError('required', 'name')">
+            姓名不能为空
+        </span>
+      </div>
+      <div class="form-group">          
+          <button type="button" class="btn btn-default btn-container-right" (click)="close()">关闭</button>
+          <button type="submit" class="btn btn-default btn-container-right" >提交</button> 
+      </div>
+    </form>
+  </div>
+</ng-template>
