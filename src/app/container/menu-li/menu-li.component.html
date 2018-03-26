@@ -1,10 +1,13 @@
-<li *ngFor="let link of links"  [class.open]="link==selectedLink&&link.links" [class.active]="link==selectedLink" >
+<li *ngFor="let link of links"   [class.active]="link==selectedLink" [class.open]="link==selectedLink&&link.links">
     <a href="#" (click)="click($event,link)" >
       <i class="menu-icon fa fa-clipboard"></i>
       {{ link.name }}
       <i class="menu-expand" *ngIf="link.links" ></i>
     </a>
-    <ul class="submenu" [style.display]="link==selectedLink?'block':'none'" *ngIf="link.links">
-        <app-menu-li [links]="link.links" [selectedLink]="selectedLink"></app-menu-li> 
+    <ul app-menu-li class="submenu" 
+    [style.display]="link==selectedLink?'block':'none'" 
+    *ngIf="link.links"
+    [links]="link.links" 
+    [selectedLink]="selectedLink">
     </ul>   
 </li>

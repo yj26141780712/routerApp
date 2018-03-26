@@ -28,6 +28,14 @@ html,body{
     left: 0rem;
     bottom: 0rem;
 }
+.home-left::before {
+    content:"";
+    position: absolute;
+    width: 14.6875rem;
+    bottom:0;
+    top: 0rem;
+    left: 5px;
+}
 
 .home-right {
     position: absolute;
@@ -36,10 +44,10 @@ html,body{
     right: 0rem;
     bottom: 0rem;
 }
-
 .home-right-ns {
    height: 2.375rem;
    background:#f3f3f3;
+   box-shadow: 5px 0 10px -5px rgba(0,0,0,.2) inset;
 }
 
 .home-right-tl {
@@ -47,22 +55,23 @@ html,body{
    width: 100%;
    position: absolute;
    top: 2.375rem;
+   box-shadow: 5px 0 10px -5px rgba(0,0,0,.2) inset;
+   /* box-shadow: 5px 0 10px -5px rgba(0,0,0,.2) inset; */
 }
 
 .home-right-ct{
     padding: 1rem 1rem;
     border-radius: .25rem;
-    background:#f3f3f3;
     position: absolute;
+    background: #eee;;
     width: 100%;
     top: 4.75rem;
     bottom: 0rem;
+    box-shadow: 5px 0 10px -5px rgba(0,0,0,.2) inset; 
 }
-  
 .home-right-ct div{
     margin-bottom: 1rem;
 }
-
 /* right container*/
 .container-top{
     height: 3rem;
@@ -99,7 +108,6 @@ html,body{
 }
 
 /* left */
-
 .sidebar-menu {
     margin: 0;
     padding: 0;
@@ -111,59 +119,51 @@ html,body{
     margin: 0;
     padding: 0;
 }
-.sidebar-menu li a{
-    position: relative;
-    display: block;
-    margin: 0;
-    padding-left: 1rem;
-    height: 2.375rem;
-    line-height: 2.25rem;
-    text-decoration:none;
-    border-bottom: 1px solid #f3f3f3;
-    color: #737373;
-}
 
 .sidebar-menu li a{
     position: relative;
     display: block;
     margin: 0;
-    padding-left: 1rem;
+    padding-left: 7px;
+    padding-right: 16px;
     height: 2.375rem;
     line-height: 2.25rem;
     text-decoration:none;
-    border-bottom: 1px solid #f3f3f3;
     color: #737373;
-    background: #ffffff;
-}
-
-.sidebar-menu li:hover{
-    color: #262626;
-    background : #f3f3f3;
-}
-
-.sidebar-menu li .submenu li a{
-    background: #f3f3f3;
 }
 
 
-
-.sidebar-menu li.active a{
+.sidebar-menu a:hover{
     color: #262626;
 }
 
-.sidebar-menu li.active {   
+.sidebar-menu>li>a:hover{
+    background: #fbfbfb;
+}
+
+.sidebar-menu li.active>a{
     color: #262626;
+}
+.sidebar-menu>li.active>a{
     background: #f5f5f5;
 }
 
-.sidebar-menu li.open{
+
+/* .sidebar-menu>li.active {   
+    background: #f5f5f5;
+} */
+
+.sidebar-menu>li.open>a{
     background : #fff;
 }
 
+.sidebar-menu>li>a{
+    border-bottom: 1px solid #f3f3f3;
+ }
 
 .sidebar-menu a i.menu-icon{
    display: inline-block;
-   width: 1 rem;
+   width: 1rem;
    height: 1rem;
 }
 
@@ -177,11 +177,51 @@ html,body{
     right: 12px;
     font-size: 13px;
 }
-.sidebar-menu>li.open>a i.menu-expand{
+
+.sidebar-menu a i.menu-expand::before{
+    content: ">"
+}
+
+.sidebar-menu li.open>a i.menu-expand{
     transform: rotate(90deg);
 }
-.sidebar-menu a i.menu-expand::before{
-    content: "1"
+.submenu{
+    margin: 0;
+    padding: 0;
+}
+.sidebar-menu>li>.submenu{
+   background: #fbfbfb;
+   box-shadow: inset 0 4px 4px -2px rgba(0,0,0,.15), inset 0 -4px 4px -2px rgba(0,0,0,.15);
+} 
+.sidebar-menu li .submenu>li>a{
+    padding-left: 38px;
+}
+
+.sidebar-menu li .submenu>li.active>a{
+    background: #f3f3f3;
+}
+
+.sidebar-menu li .submenu>li.open>a{
+    background: #fbfbfb;
+}
+
+.sidebar-menu>li>.submenu>li.active:first-child>a{
+    box-shadow: inset 0 4px 4px -2px rgba(0,0,0,.15)
+}
+.sidebar-menu>li>.submenu>li.active:last-child>a{
+    box-shadow: inset 0 -4px 4px -2px rgba(0,0,0,.15)
+}
+
+.sidebar-menu li .submenu>li .submenu{
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+}
+.sidebar-menu li .submenu>li .submenu>li>a{
+    padding-left: 56px;
+}
+
+.sidebar-menu li .submenu>li .submenu>li>a{
+    padding-left: 56px;
 }
 
 
