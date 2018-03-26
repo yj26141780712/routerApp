@@ -1,6 +1,6 @@
 import { ContactComponent } from './../contact/contact.component';
 import { AboutComponent } from './../about/about.component';
-import { NavigationComponent } from '../container/navigation/navigation.component';
+
 
 
 import { NgModule } from '@angular/core';

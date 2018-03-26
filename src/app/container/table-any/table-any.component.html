@@ -1,0 +1,16 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th *ngFor="let key of settings.columns | keys">
+        {{ settings.columns[key].title }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of source" (click)="click(item)" [class.bg-primary]="item===selectItem">
+      <td *ngFor="let key of settings.columns | keys">
+        {{ item[key]  }}
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -112,6 +112,7 @@ html,body{
     padding: 0;
 }
 .sidebar-menu li a{
+    position: relative;
     display: block;
     margin: 0;
     padding-left: 1rem;
@@ -121,21 +122,68 @@ html,body{
     border-bottom: 1px solid #f3f3f3;
     color: #737373;
 }
-.sidebar-menu li.active>a{
-    background : #f5f5f5;
+
+.sidebar-menu li a{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding-left: 1rem;
+    height: 2.375rem;
+    line-height: 2.25rem;
+    text-decoration:none;
+    border-bottom: 1px solid #f3f3f3;
+    color: #737373;
+    background: #ffffff;
 }
 
-.sidebar-menu li a:hover{
+.sidebar-menu li:hover{
     color: #262626;
     background : #f3f3f3;
 }
 
+.sidebar-menu li .submenu li a{
+    background: #f3f3f3;
+}
 
-.home-left i{
+
+
+.sidebar-menu li.active a{
+    color: #262626;
+}
+
+.sidebar-menu li.active {   
+    color: #262626;
+    background: #f5f5f5;
+}
+
+.sidebar-menu li.open{
+    background : #fff;
+}
+
+
+.sidebar-menu a i.menu-icon{
    display: inline-block;
    width: 1 rem;
    height: 1rem;
 }
+
+.sidebar-menu a i.menu-expand{
+    display: inline-block;
+    line-height: 10px;
+    width: 10px;
+    height:10px;
+    position: absolute;
+    top:15px;
+    right: 12px;
+    font-size: 13px;
+}
+.sidebar-menu>li.open>a i.menu-expand{
+    transform: rotate(90deg);
+}
+.sidebar-menu a i.menu-expand::before{
+    content: "1"
+}
+
 
 /* Other */
  .btn-container {

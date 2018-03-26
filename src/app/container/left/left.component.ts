@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftComponent implements OnInit {
 
-  links:Link[];
+  links:any;
 
   selectedLink:Link;
   constructor(private linkService:LinkService) { }
@@ -28,7 +28,8 @@ export class LeftComponent implements OnInit {
   }
 
   click(link:Link):void{
-    this.selectedLink =link;
+    this.selectedLink==link?null:this.selectedLink=link;
+    console.log(this.selectedLink==link);
   }
 
 }

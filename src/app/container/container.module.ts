@@ -5,7 +5,6 @@ import { LeftComponent } from './left/left.component';
 import { RightComponent } from './right/right.component';
 import { ContainerRoutingModule } from './container-routing.module';
 import { ButtonComponent } from './button/button.component';
-import { NavigationComponent } from './navigation/navigation.component';
 import { SearchComponent } from './user/search/search.component';
 import { ToolsComponent } from './user/tools/tools.component';
 import { TableComponent } from './user/table/table.component';
@@ -17,7 +16,10 @@ import { HeaderNavigationComponent } from './user/header-navigation/header-navig
 import { AlertModule, PaginationModule } from 'ngx-bootstrap';
 import { ChartsComponent } from './charts/charts.component';
 import { NgxEchartsModule} from 'ngx-echarts';
-import { TableAnyComponent } from './user/table-any/table-any.component'; 
+import { TableAnyComponent } from './table-any/table-any.component'; 
+import { KeysPipe } from '../tool/pipe/keys.pipe';
+import { TableShowComponent } from './table-show/table-show.component';
+import { MenuLiComponent } from './menu-li/menu-li.component';
 
 
 
@@ -33,9 +35,10 @@ import { TableAnyComponent } from './user/table-any/table-any.component';
     PaginationModule.forRoot(),
     NgxEchartsModule,
   ],
-  declarations: [ButtonComponent,NavigationComponent, SearchComponent
-    , ToolsComponent, TableComponent, TabsComponent,
-  ContainerComponent,LeftComponent,RightComponent,UserComponent, HeaderNavigationComponent, ChartsComponent, TableAnyComponent],
+  declarations: [ButtonComponent, SearchComponent, ToolsComponent, TableComponent
+    , TabsComponent,ContainerComponent,LeftComponent,RightComponent
+    ,UserComponent, HeaderNavigationComponent, ChartsComponent, TableAnyComponent
+    ,KeysPipe, TableShowComponent, MenuLiComponent],
   providers:[UserinfoService]
 })
 export class ContainerModule { }

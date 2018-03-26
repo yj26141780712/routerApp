@@ -15,7 +15,7 @@ export class LinkService {
   constructor(private http:HttpClient) { 
   }
 
-  getLinks():Observable<Link[]> {
+  getLinks():Observable<any> {
     //console.log(this.http.get<Link[]>(this.linksUrl));
     //return this.http.get<Link[]>(this.linksUrl);
     return of(Links);

@@ -7,7 +7,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { ButtonComponent } from '../container/button/button.component';
-import { NavigationComponent } from '../container/navigation/navigation.component';
 import { LeftComponent } from '../container/left/left.component';
 import { RightComponent } from '../container/right/right.component';
 import { UserComponent } from '../container/user/user.component';
