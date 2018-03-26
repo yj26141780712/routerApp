@@ -6,7 +6,9 @@ html,body{
     padding: 0;
     height: 100%;
     width: 100%;
-    position: relative;    
+    position: relative;
+    font-family: 'Open Sans','Segoe UI';
+    font-size: 13px;    
 }
 
 .home-header {
