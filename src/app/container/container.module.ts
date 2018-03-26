@@ -15,7 +15,9 @@ import { UserinfoService } from '../userinfo.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderNavigationComponent } from './user/header-navigation/header-navigation.component';
 import { AlertModule, PaginationModule } from 'ngx-bootstrap';
-
+import { ChartsComponent } from './charts/charts.component';
+import { NgxEchartsModule} from 'ngx-echarts';
+import { TableAnyComponent } from './user/table-any/table-any.component'; 
 
 
 
@@ -28,11 +30,12 @@ import { AlertModule, PaginationModule } from 'ngx-bootstrap';
     FormsModule,
     //ModalModule.forRoot(),
     AlertModule.forRoot(),
-    PaginationModule.forRoot()
+    PaginationModule.forRoot(),
+    NgxEchartsModule,
   ],
   declarations: [ButtonComponent,NavigationComponent, SearchComponent
     , ToolsComponent, TableComponent, TabsComponent,
-  ContainerComponent,LeftComponent,RightComponent,UserComponent, HeaderNavigationComponent],
+  ContainerComponent,LeftComponent,RightComponent,UserComponent, HeaderNavigationComponent, ChartsComponent, TableAnyComponent],
   providers:[UserinfoService]
 })
 export class ContainerModule { }

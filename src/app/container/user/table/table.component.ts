@@ -12,9 +12,9 @@ import { Userinfos } from '../../../mock-userinfo';
 })
 export class TableComponent implements OnInit {
 
-  userinfos: Userinfo[];
-  userinfosAll: Userinfo[];
-  selectUserinfo: Userinfo;
+  userinfos: any[];
+  userinfosAll: any[];
+  selectUserinfo: any;
   totalItems: number;
   currentPage: number = 1;
   itemsPerPage: number = 10;
@@ -41,9 +41,13 @@ export class TableComponent implements OnInit {
 
     this.userinfoService.delsubject.asObservable().subscribe(
       () => {
-        this.userinfos = this.userinfosAll = this.userinfosAll.filter(h => h !== this.selectUserinfo);
-        this.userinfos = this.userinfosAll = this.userinfoService.getcurrentPage(this.userinfos, this.currentPage, this.itemsPerPage);
-        this.totalItems = this.userinfos.length;
+        this.userinfosAll = this.userinfosAll.filter(h => h !== this.selectUserinfo);
+        console.log(this.userinfosAll);
+        this.totalItems = this.userinfosAll.length;
+        if ((this.currentPage - 1) * this.itemsPerPage >= this.totalItems && this.currentPage > 1) {
+          this.currentPage--;
+        }
+        this.userinfos = this.userinfoService.getcurrentPage(this.userinfosAll, this.currentPage, this.itemsPerPage);
       }
     );
 

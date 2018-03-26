@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*主页布局 */
 html,body{
     margin: 0;
     padding: 0;
@@ -37,15 +38,15 @@ html,body{
 }
 
 .home-right-ns {
-   height: 2.5rem;
+   height: 2.375rem;
    background:#f3f3f3;
 }
 
 .home-right-tl {
-   height: 2.5rem;
+   height: 2.375rem;
    width: 100%;
    position: absolute;
-   top: 2.5rem;
+   top: 2.375rem;
 }
 
 .home-right-ct{
@@ -54,7 +55,7 @@ html,body{
     background:#f3f3f3;
     position: absolute;
     width: 100%;
-    top: 5rem;
+    top: 4.75rem;
     bottom: 0rem;
 }
   
@@ -62,6 +63,81 @@ html,body{
     margin-bottom: 1rem;
 }
 
+/* right container*/
+.container-top{
+    height: 3rem;
+}
+.container-tools{
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    right: 1rem;
+    height: 4rem;
+}
+.container-table{
+    position: absolute;
+    top: 7rem;
+    bottom: 0rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+/* table */
+.table-container{
+    position: absolute;
+    left: 0rem;
+    right: 0rem;
+    top: 0rem;
+    bottom: 2.5rem;
+    overflow: auto;
+}
+.table-pagination {
+    position: absolute;
+    height: 2.5rem;
+    width: 100%;
+    bottom: 0rem;
+}
+
+/* left */
+
+.sidebar-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+}
+.sidebar-menu li{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-menu li a{
+    display: block;
+    margin: 0;
+    padding-left: 1rem;
+    height: 2.375rem;
+    line-height: 2.25rem;
+    text-decoration:none;
+    border-bottom: 1px solid #f3f3f3;
+    color: #737373;
+}
+.sidebar-menu li.active>a{
+    background : #f5f5f5;
+}
+
+.sidebar-menu li a:hover{
+    color: #262626;
+    background : #f3f3f3;
+}
+
+
+.home-left i{
+   display: inline-block;
+   width: 1 rem;
+   height: 1rem;
+}
+
+/* Other */
  .btn-container {
      margin-left: 1rem;
      width: 5rem;
@@ -76,6 +152,8 @@ html,body{
 .bg-home-header {
     background: #2dc3e8;
 }
+
+
 
 .bg-left-link {
     background: #f5f5f5;

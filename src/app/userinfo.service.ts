@@ -50,6 +50,7 @@ export class UserinfoService {
     //console.log(arrs);  
     let start:number = (currentPage-1)*itemsPerPage;
     let end:number =start+itemsPerPage;
+    console.log(start,end);
     arrs = arrs.slice(start,end);
     return arrs;
   }

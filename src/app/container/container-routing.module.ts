@@ -1,3 +1,4 @@
+import { ChartsComponent } from './charts/charts.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +19,7 @@ const containerRoutes: Routes = [
     component: ContainerComponent,
     children: [
       { path: 'user', component: UserComponent },
+      { path: 'charts', component: ChartsComponent },
       { path: 'button', component: ButtonComponent },
       { path: 'navigation', component: NavigationComponent },
       { path: '', component: UserComponent },
