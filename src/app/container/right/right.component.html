@@ -1,4 +1,11 @@
-<div class="home-right-ns">     
+<div class="home-right-ns"> 
+    <ul class="home-right-path">
+        <li *ngFor="let path of paths;let i=index" [class.active]="index+1==paths.length">
+            <i *ngIf="i==0" class="fa fa-home"></i>
+            <a nghref="#" *ngIf="i<paths.length-1">{{path}}</a>
+            {{ i==(paths.length-1)?path:"" }}
+        </li>
+    </ul> 
 </div>
 <div class="home-right-tl">     
 </div>

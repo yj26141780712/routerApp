@@ -21,9 +21,15 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../src/assets/ngx-datatable/bootstrap.css",
+        "../src/assets/ngx-datatable/dark.css",
+        "../src/assets/ngx-datatable/material.css",
+        "../src/assets/ngx-datatable/icons.css",
         "styles.css"
       ],
-      "scripts": ["../node_modules/echarts/dist/echarts.min.js" ],
+      "scripts": [
+        "../node_modules/echarts/dist/echarts.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -10,7 +10,6 @@ import { ButtonComponent } from '../container/button/button.component';
 import { LeftComponent } from '../container/left/left.component';
 import { RightComponent } from '../container/right/right.component';
 import { UserComponent } from '../container/user/user.component';
-import { ContainerComponent } from '../container/container.component';
 import { ContactComponent } from '../contact/contact.component';
 
 @NgModule({

@@ -1,3 +1,5 @@
+import { LeftTreeTestComponent } from './left-tree-test/left-tree-test.component';
+import { HttpComponent } from './http/http.component';
 import { ChartsComponent } from './charts/charts.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,6 +14,8 @@ import { TabsComponent } from './tabs/tabs.component';
 import { UserComponent } from './user/user.component';
 import { TableAnyComponent } from './table-any/table-any.component';
 import { TableShowComponent } from './table-show/table-show.component';
+import { NgxTabletestComponent } from './ngx-tabletest/ngx-tabletest.component';
+import { UploadDemoComponent } from './upload-demo/upload-demo.component';
 
 
 const containerRoutes: Routes = [
@@ -22,7 +26,10 @@ const containerRoutes: Routes = [
       { path: 'user', component: UserComponent },
       { path: 'charts', component: ChartsComponent },
       { path: 'table-show', component: TableShowComponent },
-      { path: 'navigation', component: TableAnyComponent },
+      { path: 'ngx-tabletest', component: NgxTabletestComponent },
+      { path: 'upload-demo', component: UploadDemoComponent },
+      { path: 'http', component: HttpComponent },
+      { path: 'left-tree-test', component: LeftTreeTestComponent },
       { path: '', component: UserComponent },
     ]
   }

@@ -10,9 +10,10 @@ import { ContainerComponent } from './container/container.component';
 
 
 const routes: Routes = [
-  { path: "login", component: LoginComponent },
-  { path: "home",  loadChildren: 'app/home/home.module#HomeModule' },
- // { path: "**", component: LoginComponent },
+ // { path: "", component: LoginComponent },
+  { path: "login", component: LoginComponent},
+  { path: "home",  loadChildren: 'app/home/home.module#HomeModule'},
+  { path: "**", component: LoginComponent },
   { path: "", redirectTo: "/login", pathMatch: "full" },
 ]
 

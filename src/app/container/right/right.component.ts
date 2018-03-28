@@ -1,4 +1,6 @@
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-right',
@@ -7,11 +9,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RightComponent implements OnInit {
 
-  @Input() path :string; 
+  paths: string[] = ["home","container","user"];
 
-  constructor() { }
+  constructor(private router: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    this.router.queryParams.subscribe(params => {
+      if (params["path"]) {
+        this.paths = params["path"].split('/');
+        console.log(this.paths);
+      }
+    })
   }
+
 
 }

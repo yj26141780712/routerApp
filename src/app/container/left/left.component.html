@@ -1,40 +1,6 @@
-<ul app-menu-li class="nav sidebar-menu" [links]="links" [selectedLink]="selectedLink" #selectedLink>
-</ul>
-<!-- <ul class="nav sidebar-menu">
-  <li>
-    <a>
-      <i class="fa fa-clipboard"></i>
-       用户管理
-    </a>
-  </li>
-  <li class="active open">
-    <a>
-      <i class="fa fa-clipboard"></i>模块管理
-      <i class="menu-expand"></i>
-    </a>
-    <ul class="submenu">
-      <li class="active">
-        <a>
-          <i class="fa fa-clipboard"></i>
-           用户管理1
-        </a>
-      </li>
-      <li>
-        <a>
-          <i class="fa fa-clipboard"></i>
-           用户管理2
-        </a>
-      </li>
-  </ul>
-  </li>
-  <li>
-    <a>
-      <i class="fa fa-clipboard"></i>模块管理1
-    </a>
-  </li>
-  <li>
-    <a>
-      <i class="fa fa-clipboard"></i>模块管理2
-    </a>
-  </li>
+<!-- <ul app-menu-tree class="nav sidebar-menu" [links]="links">
 </ul> -->
+
+
+<ul app-tree-view class="nav sidebar-menu" [links]="links" [selectedLink]="selectedLink" #selectedLink>
+</ul>
