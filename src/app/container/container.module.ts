@@ -39,6 +39,7 @@ import { DynamicListComponent } from './dynamic-list/dynamic-list.component';
 import { DynamicDirective } from '../tool/directive/dynamic.directive';
 import { DynamicService } from '../tool/service/dynamic.service';
 import { DerectiveListComponent } from './derective-list/derective-list.component';
+import { HighlightDirective } from '../tool/directive/highlight.directive';
 
 
 
@@ -61,7 +62,8 @@ import { DerectiveListComponent } from './derective-list/derective-list.componen
     ,UserComponent, HeaderNavigationComponent, ChartsComponent, TableAnyComponent
     ,KeysPipe, TableShowComponent, MenuLiComponent, NgxTabletestComponent, UploadDemoComponent
     , HttpComponent, TreeViewComponent, MenuTreeComponent, LeftTreeTestComponent, NgModelComponent
-    , TestComponent, DynamicComponent, DynamicDirective, Component1Component, Component2Component, Component3Component, DynamicListComponent, DerectiveListComponent],
+    , TestComponent, DynamicComponent, DynamicDirective, Component1Component, Component2Component
+    , Component3Component, DynamicListComponent, DerectiveListComponent, HighlightDirective],
   providers:[UserinfoService,EmitServiceService,DynamicService],
   entryComponents: [ Component1Component, Component2Component,Component3Component ],
 })

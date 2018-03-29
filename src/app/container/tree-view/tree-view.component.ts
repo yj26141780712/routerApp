@@ -32,7 +32,7 @@ export class TreeViewComponent implements OnInit {
   }
 
   click(event, link: any) {
-    console.log(link.name);
+    //console.log(link.name);
     if (link.path != "#" && this.selectedLink != link) {
       this.router.navigate([link.path], { queryParams: { path: link.path } });
     }

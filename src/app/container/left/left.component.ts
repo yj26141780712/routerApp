@@ -23,13 +23,13 @@ export class LeftComponent implements OnInit {
   }
   ngOnInit() {
       this.getLinks();
-      console.log(this.links);
+      //console.log(this.links);
      //console.log(this.links);
   }
 
   click(link:Link):void{
     this.selectedLink==link?null:this.selectedLink=link;
-    console.log(this.selectedLink==link);
+    //console.log(this.selectedLink==link);
   }
 
 }

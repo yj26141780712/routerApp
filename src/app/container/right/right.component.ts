@@ -18,7 +18,7 @@ export class RightComponent implements OnInit {
     this.router.queryParams.subscribe(params => {
       if (params["path"]) {
         this.paths = params["path"].split('/');
-        console.log(this.paths);
+        //console.log(this.paths);
       }
     })
   }
