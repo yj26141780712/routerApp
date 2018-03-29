@@ -1,3 +1,4 @@
+import { EmitServiceService } from './../../tool/service/emit-service.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,21 +8,22 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class NgModelComponent implements OnInit {
 
-  @Input() name:string
+  @Input() name: string
 
-  @Output() inputChange= new EventEmitter<string>();
+  @Output() inputChange = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private emitService: EmitServiceService) { }
 
   ngOnInit() {
   }
 
-  keyup(event:any){
-     //console.log(event);
-     //console.log(event.target.value);
-     this.inputChange.emit(event.target.value);  
+  keyup(event: any) {
+    //console.log(event);
+    
+    console.log(event.target.value);
+    this.inputChange.emit(event.target.value);
   }
 
-  
+
 
 }

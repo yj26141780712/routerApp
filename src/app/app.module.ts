@@ -19,12 +19,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieModule  } from 'ngx-cookie';
 import { ModalModule,AlertModule,PaginationModule} from 'ngx-bootstrap';
 import { HttpModule} from "@angular/http";
+import { HighlightDirective } from './tool/directive/highlight.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

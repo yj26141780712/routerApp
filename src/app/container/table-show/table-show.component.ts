@@ -23,6 +23,9 @@ export class TableShowComponent implements OnInit {
       },
       email:{
         title:"邮箱"
+      },
+      LastIP:{
+        title:"最近登陆IP"
       }
     }
   }

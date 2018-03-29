@@ -18,6 +18,8 @@ import { NgxTabletestComponent } from './ngx-tabletest/ngx-tabletest.component';
 import { UploadDemoComponent } from './upload-demo/upload-demo.component';
 import { NgModelComponent } from './ng-model/ng-model.component';
 import { TestComponent } from './test/test.component';
+import { DynamicListComponent } from './dynamic-list/dynamic-list.component';
+import { DerectiveListComponent } from './derective-list/derective-list.component';
 
 
 const containerRoutes: Routes = [
@@ -34,6 +36,8 @@ const containerRoutes: Routes = [
       { path: 'left-tree-test', component: LeftTreeTestComponent },
       { path: 'ng-model',component:NgModelComponent},
       { path:'test',component:TestComponent},
+      { path:'dynamic-list',component:DynamicListComponent},
+      {path:'derective-list',component:DerectiveListComponent},
       { path: '', component: UserComponent },
     ]
   }

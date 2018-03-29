@@ -30,6 +30,15 @@ import { MenuTreeComponent } from './menu-tree/menu-tree.component';
 import { LeftTreeTestComponent } from './left-tree-test/left-tree-test.component';
 import { NgModelComponent } from './ng-model/ng-model.component';
 import { TestComponent } from './test/test.component';
+import { EmitServiceService } from '../tool/service/emit-service.service';
+import { DynamicComponent } from './dynamic/dynamic.component';
+import { Component1Component } from './component1/component1.component';
+import { Component2Component } from './component2/component2.component';
+import { Component3Component } from './component3/component3.component';
+import { DynamicListComponent } from './dynamic-list/dynamic-list.component';
+import { DynamicDirective } from '../tool/directive/dynamic.directive';
+import { DynamicService } from '../tool/service/dynamic.service';
+import { DerectiveListComponent } from './derective-list/derective-list.component';
 
 
 
@@ -50,7 +59,10 @@ import { TestComponent } from './test/test.component';
   declarations: [ButtonComponent, SearchComponent, ToolsComponent, TableComponent
     , TabsComponent,ContainerComponent,LeftComponent,RightComponent
     ,UserComponent, HeaderNavigationComponent, ChartsComponent, TableAnyComponent
-    ,KeysPipe, TableShowComponent, MenuLiComponent, NgxTabletestComponent, UploadDemoComponent, HttpComponent, TreeViewComponent, MenuTreeComponent, LeftTreeTestComponent, NgModelComponent, TestComponent],
-  providers:[UserinfoService]
+    ,KeysPipe, TableShowComponent, MenuLiComponent, NgxTabletestComponent, UploadDemoComponent
+    , HttpComponent, TreeViewComponent, MenuTreeComponent, LeftTreeTestComponent, NgModelComponent
+    , TestComponent, DynamicComponent, DynamicDirective, Component1Component, Component2Component, Component3Component, DynamicListComponent, DerectiveListComponent],
+  providers:[UserinfoService,EmitServiceService,DynamicService],
+  entryComponents: [ Component1Component, Component2Component,Component3Component ],
 })
 export class ContainerModule { }

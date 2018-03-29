@@ -17,13 +17,16 @@ export const Links = [
     {
         id: 2, path: "#", name: '测试页面', links: [
             {
-                id: 1, path: "#", name: '组件测试', links: [
-                    { id: 1, path: "home/container/left-tree-test", name: '左边菜单', links: null },
-                    { id: 1, path: "home/container/ng-model", name: '自定义双向绑定', links: null },
-                    { id: 1, path: "home/container/test", name: '测试组件', links: null },
+                id: 1, path: "#", name: '三级菜单', links: [
+                    { id: 1, path: "#", name: '三级菜单1', links: null },
+                    { id: 1, path: "#", name: '三级菜单2', links: null },
+                    { id: 1, path: "#", name: '三级菜单3', links: null },
                 ]
             },
-            { id: 1, path: "home/container/table-show", name: '表格组件24', links: null },
+            { id: 1, path: "home/container/left-tree-test", name: '左边菜单', links: null },
+            { id: 1, path: "home/container/test", name: '模板和数据绑定', links: null },
+            { id: 1, path: "home/container/dynamic-list", name: '动态组件', links: null },
+            { id: 1, path: "home/container/derective-list", name: '指令', links: null },
             { id: 1, path: "home/container/table-show", name: '表格组件25', links: null },
         ]
     }

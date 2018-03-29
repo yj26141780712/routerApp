@@ -1,4 +1,6 @@
+import { UserinfoService } from './../../userinfo.service';
 import { Component, OnInit, animate } from '@angular/core';
+import { EmitServiceService } from '../../tool/service/emit-service.service';
 
 @Component({
   selector: 'app-test',
@@ -7,15 +9,34 @@ import { Component, OnInit, animate } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  name:string;
+  name: string;
+  ngName: string;
+  word: string = "Yang";
 
-  constructor() { }
-
-  ngOnInit() {
+  json: any;
+  constructor(private emitService: EmitServiceService, private userService: UserinfoService) {
+    // console.log("我订阅了");
+    // this.emitService.eventEmit.subscribe((name) => {
+    //   console.log("我触发了！");
+    //   this.name = name;
+    // })
+    this.userService.getUserinfos().subscribe((json) => { 
+      console.log(json[0]);
+      this.json = json; 
+    });
   }
 
-  inputChange(name:string){  
-      this.name=name;
-      console.log(this.name);
+  ngOnInit() {
+    
+  }
+
+  inputChange(name: string) {
+    console.log(this.name);
+    this.name = name;
+  }
+
+  keyup(name) {
+    this.ngName = name;
+    return false;
   }
 }

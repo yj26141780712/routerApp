@@ -1,7 +1,7 @@
 <li *ngFor="let link of links"   [class.active]="link==selectedLink" [class.open]="link==selectedLink&&link.links">
     <a nghref="#" (click)="click($event,link)" >
       <i class="menu-icon fa fa-clipboard"></i>
-      <span class="menu-text">{{ link.name }}{{state}}{{link==selectedLink?'yes':'no'}}</span>
+      <span class="menu-text">{{ link.name }}{{state}}</span>
       <i class="menu-expand fa fa-angle-right" *ngIf="link.links" ></i>
     </a>
     <ul app-tree-view class="submenu"  [ngStyle]="link==selectedLink?{'display': 'block'}:{'display': 'none'}"

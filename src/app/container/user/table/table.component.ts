@@ -23,6 +23,7 @@ export class TableComponent implements OnInit {
   ngOnInit() {
     this.userinfoService.getUserinfos().subscribe(
       userinfos => {
+        console.log()
         this.userinfosAll = userinfos;
         this.totalItems = this.userinfosAll.length;
         this.userinfos = this.userinfoService.getcurrentPage(userinfos, 1, this.itemsPerPage);

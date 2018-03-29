@@ -1,2 +1,18 @@
-<!-- 数据双向绑定实现原理 -->
-<app-ng-model [name]='name' (inputChange)='inputChange($event)'></app-ng-model> 
+<div>
+    <p>自定义双向绑定</p>
+    <app-ng-model [name]='name' (inputChange)='inputChange($event)'></app-ng-model>
+</div>
+<div>
+    <p>angular内置双向绑定ngModel</p>
+    <label for="">{{ngName}}</label>
+    <input type="text" [(ngModel)]='ngName'>
+</div>
+<div>
+    <p>管道</p>
+    <h3>原始: {{ word  }}</h3>
+    <h3>大写: {{ word | uppercase }}</h3>
+    <h3>小写: {{ word | lowercase }}</h3>
+    <p>json:{{ json | json }}</p>
+</div>
+
+

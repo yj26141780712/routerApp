@@ -1,0 +1,7 @@
+<h3>动态组件测试</h3>
+<app-dynamic [dynamics]='dynamics' [showIndex]='showIndex'>
+</app-dynamic>
+<button (click)="pre()" [disabled]="showIndex==0">上一个</button>
+<button (click)="next()" [disabled]="showIndex+1==dynamics.length" >下一个</button>
+
+
