@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
   animations: [
     trigger('openState', [
       state('yes', style({
-        height: "50px",
+        height: "*",
       })),
       state('no', style({
         height: "0px",
       })),
-      transition('* => *', animate('300ms ease')),
+      transition('* => *', animate('300ms ease-out')),
       //transition('no => yes', animate('600ms ease')),
       // transition('no => yes', animate('1000ms ease-in'))
     ])
@@ -37,8 +37,5 @@ export class TreeViewComponent implements OnInit {
       this.router.navigate([link.path], { queryParams: { path: link.path } });
     }
     this.selectedLink == link ? this.selectedLink = null : this.selectedLink = link;
-    //this.state =  this.selectedLink == link ? 'in' : 'out';   
-    //console.log(this.state);
-    //return false;
   }
 }

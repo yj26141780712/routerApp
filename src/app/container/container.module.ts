@@ -28,6 +28,8 @@ import { HttpComponent } from './http/http.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
 import { MenuTreeComponent } from './menu-tree/menu-tree.component';
 import { LeftTreeTestComponent } from './left-tree-test/left-tree-test.component';
+import { NgModelComponent } from './ng-model/ng-model.component';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -48,7 +50,7 @@ import { LeftTreeTestComponent } from './left-tree-test/left-tree-test.component
   declarations: [ButtonComponent, SearchComponent, ToolsComponent, TableComponent
     , TabsComponent,ContainerComponent,LeftComponent,RightComponent
     ,UserComponent, HeaderNavigationComponent, ChartsComponent, TableAnyComponent
-    ,KeysPipe, TableShowComponent, MenuLiComponent, NgxTabletestComponent, UploadDemoComponent, HttpComponent, TreeViewComponent, MenuTreeComponent, LeftTreeTestComponent],
+    ,KeysPipe, TableShowComponent, MenuLiComponent, NgxTabletestComponent, UploadDemoComponent, HttpComponent, TreeViewComponent, MenuTreeComponent, LeftTreeTestComponent, NgModelComponent, TestComponent],
   providers:[UserinfoService]
 })
 export class ContainerModule { }

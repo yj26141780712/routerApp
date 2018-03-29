@@ -16,6 +16,8 @@ import { TableAnyComponent } from './table-any/table-any.component';
 import { TableShowComponent } from './table-show/table-show.component';
 import { NgxTabletestComponent } from './ngx-tabletest/ngx-tabletest.component';
 import { UploadDemoComponent } from './upload-demo/upload-demo.component';
+import { NgModelComponent } from './ng-model/ng-model.component';
+import { TestComponent } from './test/test.component';
 
 
 const containerRoutes: Routes = [
@@ -30,6 +32,8 @@ const containerRoutes: Routes = [
       { path: 'upload-demo', component: UploadDemoComponent },
       { path: 'http', component: HttpComponent },
       { path: 'left-tree-test', component: LeftTreeTestComponent },
+      { path: 'ng-model',component:NgModelComponent},
+      { path:'test',component:TestComponent},
       { path: '', component: UserComponent },
     ]
   }

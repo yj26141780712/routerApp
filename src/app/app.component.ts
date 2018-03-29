@@ -22,8 +22,6 @@ export class AppComponent implements OnInit {
     })
   }
   ngOnInit(){
-    this.http.post("http://localhost:3000/api","",{ headers:this.headers }).map((data)=>{
-        console.log(data);
-    });
+
   }
 }

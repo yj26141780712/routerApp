@@ -24,6 +24,7 @@
     "@swimlane/ngx-datatable": "^11.2.0",
     "angular-in-memory-web-api": "^0.5.4",
     "bootstrap": "^4.0.0",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.4.1",
     "echarts": "^4.0.4",
     "font-awesome": "^4.7.0",

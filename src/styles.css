@@ -221,13 +221,14 @@ html,body{
     padding: 0;
     display: none;
     position: relative;
+    background: #fbfbfb;
 }
 .sidebar-menu>li>.submenu{
-   background: #fbfbfb;
    box-shadow: inset 0 4px 4px -2px rgba(0,0,0,.15), inset 0 -4px 4px -2px rgba(0,0,0,.15);
 } 
 .sidebar-menu li .submenu>li>a{
     padding-left: 38px;
+    background: #fbfbfb;
 }
 
 .sidebar-menu li .submenu>li.active>a{
@@ -238,10 +239,10 @@ html,body{
     background: #fbfbfb;
 }
 
-.sidebar-menu>li>.submenu>li.active:first-child>a{
+.sidebar-menu>li>.submenu>li:first-child>a{
     box-shadow: inset 0 4px 4px -2px rgba(0,0,0,.15)
 }
-.sidebar-menu>li>.submenu>li.active:last-child>a{
+.sidebar-menu>li>.submenu>li:last-child>a{
     box-shadow: inset 0 -4px 4px -2px rgba(0,0,0,.15)
 }
 
