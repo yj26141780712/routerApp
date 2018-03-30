@@ -1,0 +1,13 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">   
+      <div app-form-dynamic-question  class="from-group" *ngFor="let question of questions" class="form-row"
+         [question]="question" [form]="form">
+      </div>  
+      <div class="form-row">
+        <button type="submit" [disabled]="!form.valid" class="btn btn-default">保存</button>
+      </div>
+    </form>
+    <div *ngIf="payLoad" class="form-row">
+      <strong>提交结果:</strong><br>{{payLoad}}
+    </div>
+</div>

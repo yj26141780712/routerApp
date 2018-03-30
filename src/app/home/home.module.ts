@@ -3,7 +3,7 @@ import { ContainerModule } from './../container/container.module';
 import { HeaderComponent } from './../header/header.component';
 import { LinkService } from './../link.service';
 import { HomeComponent } from './home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { ButtonComponent } from '../container/button/button.component';
@@ -21,4 +21,11 @@ import { ContactComponent } from '../contact/contact.component';
   providers:[LinkService],
   declarations:[HomeComponent,AboutComponent,HeaderComponent,ContactComponent]
 })
-export class HomeModule { }
+export class HomeModule {
+  constructor (@Optional() @SkipSelf() parentModule: HomeModule) {
+    if (parentModule) {
+      throw new Error(
+        'HomeModule is already loaded. Import it in the AppModule only');
+    }
+  }
+}

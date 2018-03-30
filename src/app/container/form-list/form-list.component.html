@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <p>使用模板变量获取输入框(也是一种实现双向绑定的方式)</p>
+    <input #box type="text" (keyup)="keyup1(box.value)">
+    <p>{{value1}}</p>
+  </div>
+  <div>
+    <p>事件过滤</p>
+    <input type="text" (keyup.enter)="keyup2($event)">
+    <p>{{value2}}</p>
+  </div>
+  <div>
+    <p>失去焦点事件</p>
+    <input type="text" (blur)="blur($event)">
+    <p>{{value3}}</p>
+  </div>
+</div>

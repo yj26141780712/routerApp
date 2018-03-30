@@ -20,6 +20,9 @@ import { NgModelComponent } from './ng-model/ng-model.component';
 import { TestComponent } from './test/test.component';
 import { DynamicListComponent } from './dynamic-list/dynamic-list.component';
 import { DerectiveListComponent } from './derective-list/derective-list.component';
+import { FormListComponent } from './form-list/form-list.component';
+import { FormSubmitComponent } from './form-submit/form-submit.component';
+import { FormDynamicComponent } from './form-dynamic/form-dynamic.component';
 
 
 const containerRoutes: Routes = [
@@ -34,10 +37,13 @@ const containerRoutes: Routes = [
       { path: 'upload-demo', component: UploadDemoComponent },
       { path: 'http', component: HttpComponent },
       { path: 'left-tree-test', component: LeftTreeTestComponent },
-      { path: 'ng-model',component:NgModelComponent},
-      { path:'test',component:TestComponent},
-      { path:'dynamic-list',component:DynamicListComponent},
-      {path:'derective-list',component:DerectiveListComponent},
+      { path: 'ng-model', component: NgModelComponent },
+      { path: 'test', component: TestComponent },
+      { path: 'dynamic-list', component: DynamicListComponent },
+      { path: 'derective-list', component: DerectiveListComponent },
+      { path: 'form-list', component: FormListComponent },
+      { path: 'form-submit', component: FormSubmitComponent },
+      { path: 'form-dynamic', component: FormDynamicComponent },
       { path: '', component: UserComponent },
     ]
   }

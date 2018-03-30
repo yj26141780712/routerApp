@@ -1,5 +1,5 @@
 import { ContainerComponent } from './container.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LeftComponent } from './left/left.component';
 import { RightComponent } from './right/right.component';
@@ -40,6 +40,13 @@ import { DynamicDirective } from '../tool/directive/dynamic.directive';
 import { DynamicService } from '../tool/service/dynamic.service';
 import { DerectiveListComponent } from './derective-list/derective-list.component';
 import { HighlightDirective } from '../tool/directive/highlight.directive';
+import { FormListComponent } from './form-list/form-list.component';
+import { UserFromComponent } from './user/user-from/user-from.component';
+import { FormSubmitComponent } from './form-submit/form-submit.component';
+import { FromReactiveComponent } from './from-reactive/from-reactive.component';
+import { FormTemplateComponent } from './form-template/form-template.component';
+import { FormDynamicComponent } from './form-dynamic/form-dynamic.component';
+import { FormDynamicQuestionComponent } from './form-dynamic-question/form-dynamic-question.component';
 
 
 
@@ -63,8 +70,15 @@ import { HighlightDirective } from '../tool/directive/highlight.directive';
     ,KeysPipe, TableShowComponent, MenuLiComponent, NgxTabletestComponent, UploadDemoComponent
     , HttpComponent, TreeViewComponent, MenuTreeComponent, LeftTreeTestComponent, NgModelComponent
     , TestComponent, DynamicComponent, DynamicDirective, Component1Component, Component2Component
-    , Component3Component, DynamicListComponent, DerectiveListComponent, HighlightDirective],
+    , Component3Component, DynamicListComponent, DerectiveListComponent, HighlightDirective, FormListComponent, UserFromComponent, FormSubmitComponent, FromReactiveComponent, FormTemplateComponent, FormDynamicComponent, FormDynamicQuestionComponent],
   providers:[UserinfoService,EmitServiceService,DynamicService],
-  entryComponents: [ Component1Component, Component2Component,Component3Component ],
+  entryComponents: [ Component1Component, Component2Component,Component3Component,UserFromComponent],
 })
-export class ContainerModule { }
+export class ContainerModule {
+    constructor (@Optional() @SkipSelf() parentModule: ContainerModule) {
+      if (parentModule) {
+        throw new Error(
+          'ContainerModule is already loaded. Import it in the AppModule only');
+      }
+    }
+}

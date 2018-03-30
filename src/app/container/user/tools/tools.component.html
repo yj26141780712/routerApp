@@ -1,7 +1,7 @@
 
-  <button type="button" class="btn btn-primary btn-container" (click)="add(template)">新增</button>
-  <button type="button" class="btn btn-info btn-container" (click)="edit(template)" >修改</button>
-  <button type="button" class="btn btn-danger btn-container" (click)="del()">删除</button>
+<button type="button" class="btn btn-primary btn-container" (click)="add(template)">新增</button>
+<button type="button" class="btn btn-info btn-container" (click)="edit(template)" >修改</button>
+<button type="button" class="btn btn-danger btn-container" (click)="del()">删除</button>
 
 <ng-template #template>
   <div class="modal-header">
@@ -11,28 +11,28 @@
     <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
       <div class="form-group">
         <label for="name">用户名</label>
-        <input type="text" class="form-control" formControlName="username" >
-        <span class="text-danger" [hidden]="!myForm.hasError('minlength', 'username')">
-            用户名长度必须大于6
+        <input type="text" class="form-control" required  [formControl]="username" >
+        <span class="text-danger" *ngIf="myForm.hasError('minlength', 'username')&&(myForm.controls['username'].dirty || myForm.controls['username'].touched)">
+            用户名长度必须大于8
         </span>
       </div>
       <div class="form-group">  
         <label for="alterEgo">密码</label>
-        <input type="password" class="form-control" formControlName="password" >
-        <span class="text-danger" [hidden]="!myForm.hasError('required', 'password')">
-            密码不正确
-        </span>
+        <input type="password" class="form-control" required formControlName="password" >
+        <span class="text-danger" *ngIf="myForm.hasError('forbiddenName', 'password')&&(myForm.controls['password'].dirty || myForm.controls['password'].touched)">
+            密码必须为5-16位数字和字母混合
+        </span> 
       </div>
       <div class="form-group">
         <label for="alterEgo">姓名</label>
-        <input type="text" class="form-control" formControlName="name" >
-        <span class="text-danger" [hidden]="!myForm.hasError('required', 'name')">
+        <input type="text" class="form-control" required formControlName="name" >
+        <span class="text-danger" *ngIf="myForm.hasError('required', 'name')&&(myForm.controls['name'].dirty || myForm.controls['name'].touched)">
             姓名不能为空
         </span>
       </div>
       <div class="form-group">          
-          <button type="button" class="btn btn-default btn-container-right" (click)="close()">关闭</button>
-          <button type="submit" class="btn btn-default btn-container-right" >提交</button> 
+          <button type="button" class="btn btn-default btn-container-right"  (click)="close()">关闭</button>
+          <button type="submit" class="btn btn-default btn-container-right"  [disabled]="myForm.invalid" >提交</button> 
       </div>
     </form>
   </div>

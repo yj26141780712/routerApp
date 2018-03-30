@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>我是响应式表单</h1>
+  <form [formGroup]="myForm">
+    <div class="form-group">
+      <label for="name">姓名</label>
+      <input type="text" class="form-control" name="name" [formControl]="name">
+      <div class="alert alert-danger" *ngIf="myForm.controls['name'].invalid">
+        名字不能为空
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="age">年龄</label>
+      <input type="text" class="form-control" name="age" [formControl]="age">
+      <div class="alert alert-danger" *ngIf="myForm.controls['age'].invalid">
+        年龄不能为空
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">地址</label>
+      <input type="text" class="form-control" name="address" [formControl]="address">
+      <div class="alert alert-danger" *ngIf="myForm.controls['address'].invalid">
+        地址不能为空
+      </div>
+    </div>
+    <button type="submit" class="btn btn-default" [disabled]="myForm.invalid" >
+      提交
+    </button>
+    <button class="btn btn-default" (click)="myForm.reset({})">
+      重置
+    </button>
+  </form>
+</div>

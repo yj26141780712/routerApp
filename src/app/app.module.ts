@@ -19,13 +19,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieModule  } from 'ngx-cookie';
 import { ModalModule,AlertModule,PaginationModule} from 'ngx-bootstrap';
 import { HttpModule} from "@angular/http";
+import { ForbiddenValidatorDirective } from './tool/directive/forbidden-validator.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    ForbiddenValidatorDirective, //声明使用
   ],
-  imports: [
+  imports: [ //导入使用模块
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -38,7 +40,7 @@ import { HttpModule} from "@angular/http";
     HttpModule,
     HttpClientInMemoryWebApiModule.forRoot( InMemoryDataService, { dataEncapsulation: true } ),
   ],
-  providers:[],
+  providers:[],//提供组件使用的服务
   bootstrap: [AppComponent]
 })
 export class AppModule { }
