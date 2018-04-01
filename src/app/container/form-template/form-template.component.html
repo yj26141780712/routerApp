@@ -3,7 +3,7 @@
     <form #myFrom="ngForm">
         <div class="form-group">
             <label for="name">姓名</label>
-            <input type="text" class="form-control" name="name" required [(ngModel)]="user.name" #name="ngModel">
+            <input type="text" class="form-control" name="name" required appForbiddenName="bob" [(ngModel)]="user.name" #name="ngModel">
             <div class="alert alert-danger" *ngIf="name.invalid">
               名字不能为空
             </div>
@@ -22,7 +22,7 @@
               地址不能为空
             </div>
           </div>
-          <button type="submit" class="btn btn-default"  >
+          <button type="submit" class="btn btn-default"  [disabled]="myFrom.invalid">
             提交
           </button>
           <button class="btn btn-default" >

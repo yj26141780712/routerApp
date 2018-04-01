@@ -70,7 +70,9 @@ import { FormDynamicQuestionComponent } from './form-dynamic-question/form-dynam
     ,KeysPipe, TableShowComponent, MenuLiComponent, NgxTabletestComponent, UploadDemoComponent
     , HttpComponent, TreeViewComponent, MenuTreeComponent, LeftTreeTestComponent, NgModelComponent
     , TestComponent, DynamicComponent, DynamicDirective, Component1Component, Component2Component
-    , Component3Component, DynamicListComponent, DerectiveListComponent, HighlightDirective, FormListComponent, UserFromComponent, FormSubmitComponent, FromReactiveComponent, FormTemplateComponent, FormDynamicComponent, FormDynamicQuestionComponent],
+    , Component3Component, DynamicListComponent, DerectiveListComponent, HighlightDirective
+    , FormListComponent, UserFromComponent, FormSubmitComponent, FromReactiveComponent
+    , FormTemplateComponent, FormDynamicComponent, FormDynamicQuestionComponent],
   providers:[UserinfoService,EmitServiceService,DynamicService],
   entryComponents: [ Component1Component, Component2Component,Component3Component,UserFromComponent],
 })

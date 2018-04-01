@@ -1,21 +1,22 @@
-import { Directive } from '@angular/core';
-import { AbstractControl, ValidatorFn } from '@angular/forms';
+import { Directive, Input } from '@angular/core';
+import { AbstractControl, ValidatorFn, NG_VALIDATORS, Validator } from '@angular/forms';
 
 export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any} => {
     const forbidden = nameRe.test(control.value);
-    console.log(control.value);
-    console.log(nameRe);
-    console.log(forbidden);
     return !forbidden ? {'forbiddenName': {value: control.value}}:null ;
   };
 }
 
 @Directive({
-  selector: '[appForbiddenValidator]'
+  selector: '[appForbiddenName]',
+  providers: [{provide: NG_VALIDATORS, useExisting: ForbiddenValidatorDirective, multi: true}]
 })
-export class ForbiddenValidatorDirective {
-
-  constructor() { }
-
+export class ForbiddenValidatorDirective implements Validator {
+  @Input('appForbiddenName') forbiddenName: string;
+  validate(control: AbstractControl): {[key: string]: any} {
+    console.log(control.value);
+    return this.forbiddenName ? {'forbiddenName': {value: control.value}} : null;
+  }
 }
+

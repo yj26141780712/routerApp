@@ -19,34 +19,14 @@ const homeRoutes: Routes = [
   {
      path: '',
      component: HomeComponent,
-     //canActivate: [AuthGuardService],
-
-    // //canActivateChild: [AuthGuardService],
      children: [
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'container', loadChildren:"app/container/container.module#ContainerModule" },
       { path: '', loadChildren:"app/container/container.module#ContainerModule" }
      ]
-      // { path: 'container', component: ContainerComponent },
-      // { path: '', component: ContainerComponent
-      // ,children:[
-      //     { path: 'button', component: ButtonComponent },
-      //     { path: 'navigation', component: NavigationComponent },
-      //     //{ path: '', component: ButtonComponent },        
-      // ] 
-      //{ path: '', loadChildren:"app/container/container.module#ContainerModule" }
-   // ]
-
-    // children: [
-    //   { path: 'about', component: AboutComponent },
-    //   { path: 'contact', component: ContactComponent },
-    //   { path: 'container', component: ContainerComponent }
-    // ]
   }
 ];
-
-
 
 @NgModule({
   imports: [RouterModule.forChild(homeRoutes)],

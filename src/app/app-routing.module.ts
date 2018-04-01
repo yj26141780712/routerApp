@@ -10,14 +10,11 @@ import { ContainerComponent } from './container/container.component';
 
 
 const routes: Routes = [
- // { path: "", component: LoginComponent },
   { path: "login", component: LoginComponent},
   { path: "home",  loadChildren: 'app/home/home.module#HomeModule'},
   { path: "**", component: LoginComponent },
-  { path: "", redirectTo: "/login", pathMatch: "full" },
+  { path: "", redirectTo: "/login", pathMatch: "full" }, //prefix
 ]
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: false })],

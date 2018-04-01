@@ -11,18 +11,15 @@ export class NgModelComponent implements OnInit {
   @Input() name: string
 
   @Output() inputChange = new EventEmitter<string>();
-
+  keyup(event: any) {
+    this.inputChange.emit(event.target.value);
+  }
   constructor(private emitService: EmitServiceService) { }
 
   ngOnInit() {
   }
 
-  keyup(event: any) {
-    //console.log(event);
-    
-    console.log(event.target.value);
-    this.inputChange.emit(event.target.value);
-  }
+  
 
 
 
